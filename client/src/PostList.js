@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import CommentCreate from "./CommentCreate";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
@@ -24,6 +25,7 @@ export default () => {
       >
         <div className="card-body">
           <h2>{post.title}</h2>
+          <CommentCreate postId={post.id} />
         </div>
       </div>
     );
