@@ -8,7 +8,9 @@ export default ({ postId }) => {
   const onSubmit = async (event) => {
     event.preventDefault();
 
-    await axios.post(`http://localhost:4001/posts/${postId}/comments`, content);
+    await axios.post(`http://localhost:4001/posts/${postId}/comments`, {
+      content,
+    });
 
     setContent(""); //despues de hacer el request 'limpiamos' el state
   };
