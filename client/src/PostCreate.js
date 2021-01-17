@@ -8,7 +8,7 @@ export default () => {
   const onSubmit = async (event) => {
     event.preventDefault();
 
-    await axios.post("http://localhost:4000/posts", { title }); //como segundo argumento pasamos el body de nuestra request, en este caso el titulo del post
+    await axios.post("http://posts.com/posts", { title }); //como segundo argumento pasamos el body de nuestra request, en este caso el titulo del post
     setTitle("");
   };
   return (
